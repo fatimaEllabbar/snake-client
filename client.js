@@ -9,7 +9,10 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: FAT");
+    conn.write("Say: HELLO");
+    
   });
+
   conn.addListener("close", () => {
     console.log("you ded cuz you idled");
   });
